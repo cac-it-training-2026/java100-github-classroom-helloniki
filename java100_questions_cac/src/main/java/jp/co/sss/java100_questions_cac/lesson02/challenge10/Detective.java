@@ -88,6 +88,12 @@ public class Detective {
 
 		//ここに記述する
 
+		System.out.println("探偵：");
+		if (num == 2) {
+			System.out.println("正解です。");
+		} else {
+			System.out.println("不正解です。");
+		}
 	}
 
 }

@@ -41,6 +41,63 @@
 
 package jp.co.sss.java100_questions_cac.lesson01.challenge07;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
+	public static void main(String[] args) throws IOException {
+		double num_siro = 30;
+		double num_choco = 30;
+		double num_pisu = 30;
+
+		System.out.println("本日のおすすめ商品です。");
+		System.out.println("");
+		System.out.println("シトロン　　　\\250・・・残り" + num_siro + "個");
+		System.out.println("ショコラ　　　\\280・・・残り" + num_choco + "個");
+		System.out.println("ピスターシュ　\\320・・・残り" + num_pisu + "個");
+
+		System.out.println("それぞれ何個ずつ買いますか？（最大30個まで）");
+		System.out.println("");
+
+		System.out.print("シトロン　　　＞");
+		BufferedReader reader1 = new BufferedReader(new InputStreamReader(System.in));
+		String str1 = reader1.readLine();
+		double siro = Double.parseDouble(str1);
+
+		System.out.print("ショコラ　　　＞");
+		BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
+		String str2 = reader2.readLine();
+		double choco = Double.parseDouble(str2);
+
+		System.out.print("ピスターシュ　＞");
+		BufferedReader reader3 = new BufferedReader(new InputStreamReader(System.in));
+		String str3 = reader3.readLine();
+		double pisu = Double.parseDouble(str3);
+
+		System.out.println();
+		System.out.println("シトロン　　" + siro + "個");
+		System.out.println("ショコラ　　" + choco + "個");
+		System.out.println("ピスターシュ" + pisu + "個");
+		System.out.println();
+
+		System.out.println("合計個数　　" + (siro + choco + pisu) + "個です");
+		System.out.println("合計金額　" + ((int) siro * 250 + choco * 280 + pisu * 320) + "円です");
+
+		System.out.println("");
+		System.out.println("を買いあげですね。");
+		System.out.println("承りました。");
+
+		num_siro -= siro;
+		num_choco -= choco;
+		num_pisu -= pisu;
+
+		System.out.println("");
+		System.out.println("本日のおすすめ商品です。");
+		System.out.println("");
+		System.out.println("シトロン　　　\\250・・・残り" + (int) num_siro + "個");
+		System.out.println("ショコラ　　　\\280・・・残り" + (int) num_choco + "個");
+		System.out.println("ピスターシュ　\\320・・・残り" + (int) num_pisu + "個");
+	}
 
 }

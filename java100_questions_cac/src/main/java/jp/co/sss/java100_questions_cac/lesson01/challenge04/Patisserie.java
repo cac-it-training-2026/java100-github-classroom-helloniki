@@ -28,6 +28,39 @@
 
 package jp.co.sss.java100_questions_cac.lesson01.challenge04;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
 
+	public static void main(String[] args) throws IOException {
+
+		System.out.println("それぞれ何個ずつ買いますか？（最大30個まで）");
+		System.out.println("");
+
+		BufferedReader reader1 = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.print("シトロン　　　＞");
+		String str1 = reader1.readLine();
+		int siro = Integer.parseInt(str1);
+
+		System.out.print("ショコラ　　　＞");
+		String str2 = reader1.readLine();
+		int choco = Integer.parseInt(str2);
+
+		System.out.print("ピスターシュ　＞");
+		String str3 = reader1.readLine();
+		int pisu = Integer.parseInt(str3);
+
+		System.out.println();
+		System.out.println("シトロン　　" + siro + "個");
+		System.out.println("ショコラ　　" + choco + "個");
+		System.out.println("ピスターシュ" + pisu + "個");
+		System.out.println();
+
+		System.out.println("を買いあげですね。");
+		System.out.println("承りました。");
+
+	}
 }
